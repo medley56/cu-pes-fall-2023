@@ -1,0 +1,562 @@
+
+TrafficLights.axf:     file format elf32-little
+TrafficLights.axf
+architecture: UNKNOWN!, flags 0x00000112:
+EXEC_P, HAS_SYMS, D_PAGED
+start address 0x000000d5
+
+Program Header:
+    LOAD off    0x00010000 vaddr 0x00000000 paddr 0x00000000 align 2**16
+         filesz 0x000021f8 memsz 0x000021f8 flags r-x
+    LOAD off    0x0001f080 vaddr 0x1ffff080 paddr 0x000021f8 align 2**16
+         filesz 0x00000008 memsz 0x00000008 flags rw-
+    LOAD off    0x0000f000 vaddr 0x1ffff000 paddr 0x1ffff000 align 2**16
+         filesz 0x00000000 memsz 0x00000970 flags rw-
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         000021f8  00000000  00000000  00010000  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000008  1ffff080  000021f8  0001f080  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          000000e8  1ffff088  1ffff088  0002f000  2**2
+                  ALLOC
+  3 .mtb_buffer_default 00000080  1ffff000  1ffff000  0002f000  2**7
+                  ALLOC
+  4 .uninit_RESERVED 00000000  1ffff080  1ffff080  0001f088  2**2
+                  CONTENTS
+  5 .noinit       00000000  1ffff170  1ffff170  00000000  2**2
+                  ALLOC
+  6 .heap         00000400  1ffff170  1ffff170  0002f000  2**2
+                  ALLOC
+  7 .heap2stackfill 00000400  1ffff570  1ffff570  0002f000  2**0
+                  ALLOC
+  8 .stack        00000000  20002c00  20002c00  0001f088  2**2
+                  CONTENTS
+  9 .debug_info   0000759a  00000000  00000000  0001f088  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 10 .debug_abbrev 00001918  00000000  00000000  00026622  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 11 .debug_aranges 00000828  00000000  00000000  00027f3a  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 12 .debug_rnglists 000005ed  00000000  00000000  00028762  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 13 .debug_line   000046b1  00000000  00000000  00028d4f  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 14 .debug_str    00003b38  00000000  00000000  0002d400  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 15 .comment      00000045  00000000  00000000  00030f38  2**0
+                  CONTENTS, READONLY
+ 16 .ARM.attributes 0000002a  00000000  00000000  00030f7d  2**0
+                  CONTENTS, READONLY
+ 17 .debug_frame  00001aa8  00000000  00000000  00030fa8  2**2
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+SYMBOL TABLE:
+00000000 l    d  .text	00000000 .text
+1ffff080 l    d  .data	00000000 .data
+1ffff088 l    d  .bss	00000000 .bss
+1ffff000 l    d  .mtb_buffer_default	00000000 .mtb_buffer_default
+1ffff080 l    d  .uninit_RESERVED	00000000 .uninit_RESERVED
+1ffff170 l    d  .noinit	00000000 .noinit
+1ffff170 l    d  .heap	00000000 .heap
+1ffff570 l    d  .heap2stackfill	00000000 .heap2stackfill
+20002c00 l    d  .stack	00000000 .stack
+00000000 l    d  .debug_info	00000000 .debug_info
+00000000 l    d  .debug_abbrev	00000000 .debug_abbrev
+00000000 l    d  .debug_aranges	00000000 .debug_aranges
+00000000 l    d  .debug_rnglists	00000000 .debug_rnglists
+00000000 l    d  .debug_line	00000000 .debug_line
+00000000 l    d  .debug_str	00000000 .debug_str
+00000000 l    d  .comment	00000000 .comment
+00000000 l    d  .ARM.attributes	00000000 .ARM.attributes
+00000000 l    d  .debug_frame	00000000 .debug_frame
+00000000 l    df *ABS*	00000000 startup_mkl25z4.c
+00000400 l       .text	00000000 $d
+00000000 l       .text	00000000 $d
+00000158 l       .text	00000000 $t
+0000019a l       .text	00000000 $t
+000000d4 l       .text	00000000 $t
+0000014c l       .text	00000000 $d
+000001d0 l       .text	00000000 $t
+00000000 l    df *ABS*	00000000 fsl_debug_console.c
+00001c2c l       .text	00000000 $t
+00001c2d l     F .text	00000040 UART_EnableTx
+00001c6c l       .text	00000000 $t
+00001c6d l     F .text	00000040 UART_EnableRx
+00001cac l       .text	00000000 $t
+00001cad l     F .text	00000040 LPSCI_EnableTx
+00001cec l       .text	00000000 $t
+00001ced l     F .text	00000040 LPSCI_EnableRx
+1ffff088 l       .bss	00000000 $d
+1ffff088 l     O .bss	00000010 s_debugConsole
+00000410 l       .text	00000000 $t
+000004f0 l       .text	00000000 $d
+00000000 l    df *ABS*	00000000 led.c
+00000504 l       .text	00000000 $t
+00000505 l     F .text	00000018 red_led_on
+00000518 l       .text	00000000 $d
+0000051c l       .text	00000000 $t
+0000051d l     F .text	00000018 green_led_on
+00000530 l       .text	00000000 $d
+00000534 l       .text	00000000 $t
+00000535 l     F .text	00000014 blue_led_on
+00000544 l       .text	00000000 $d
+00000548 l       .text	00000000 $t
+00000549 l     F .text	00000018 red_led_off
+0000055c l       .text	00000000 $d
+00000560 l       .text	00000000 $t
+00000561 l     F .text	00000018 green_led_off
+00000574 l       .text	00000000 $d
+00000578 l       .text	00000000 $t
+00000579 l     F .text	00000014 blue_led_off
+00000588 l       .text	00000000 $d
+0000058c l       .text	00000000 $t
+00000614 l       .text	00000000 $d
+00001d2c l       .text	00000000 $t
+00001d42 l       .text	00000000 $t
+00001d58 l       .text	00000000 $t
+00001d6e l       .text	00000000 $t
+00001d84 l       .text	00000000 $t
+00001d9a l       .text	00000000 $t
+00001db0 l       .text	00000000 $t
+00001e2a l       .text	00000000 $t
+00001e66 l       .text	00000000 $t
+00000000 l    df *ABS*	00000000 main.c
+00000630 l       .text	00000000 $t
+000006b4 l       .text	00000000 $d
+1ffff098 l     O .bss	00000004 polled_ms.0
+000006b8 l       .text	00000000 $t
+00000714 l       .text	00000000 $d
+00001ea2 l       .text	00000000 $t
+1ffff098 l       .bss	00000000 $d
+00000000 l    df *ABS*	00000000 semihost_hardfault.c
+00000718 l       .text	00000000 $t
+00000726 l       .text	00000000 _MSP
+0000072a l       .text	00000000 _process
+00000736 l       .text	00000000 _semihost_return
+00000742 l       .text	00000000 $d
+00000744 l       .text	00000000 $d
+00000000 l    df *ABS*	00000000 tsi.c
+00000748 l       .text	00000000 $t
+00000768 l       .text	00000000 $d
+00000778 l       .text	00000000 $t
+000007ec l       .text	00000000 $d
+00000000 l    df *ABS*	00000000 wait.c
+000007f0 l       .text	00000000 $t
+00000818 l       .text	00000000 $d
+00000000 l    df *ABS*	00000000 fsl_clock.c
+0000081c l       .text	00000000 $t
+0000081d l     F .text	00000034 CLOCK_SetEr32kClock
+00000848 l       .text	00000000 $d
+00000850 l       .text	00000000 $t
+00000851 l     F .text	00000038 CLOCK_SetPllFllSelClock
+0000087c l       .text	00000000 $d
+00001ec4 l       .text	00000000 $t
+00001ec5 l     F .text	0000003e OSC_SetExtRefClkConfig
+00001f02 l       .text	00000000 $t
+00001f03 l     F .text	00000042 OSC_SetCapLoad
+1ffff080 l       .data	00000000 $d
+1ffff080 l     O .data	00000004 s_slowIrcFreq
+1ffff09c l       .bss	00000000 $d
+00000888 l       .text	00000000 $t
+00000889 l     F .text	00000014 CLOCK_GetMcgExtClkFreq
+00000898 l       .text	00000000 $d
+0000089c l       .text	00000000 $t
+0000089d l     F .text	000000a8 CLOCK_GetFllExtRefClkFreq
+00000940 l       .text	00000000 $d
+00000944 l       .text	00000000 $t
+00000945 l     F .text	0000002c CLOCK_GetFllRefClkFreq
+00000968 l       .text	00000000 $d
+00001f44 l       .text	00000000 $t
+00001f45 l     F .text	00000010 CLOCK_GetPll0RefFreq
+00000970 l       .text	00000000 $t
+00000971 l     F .text	0000004c CLOCK_GetOscRangeFromFreq
+000009b4 l       .text	00000000 $d
+000009bc l       .text	00000000 $t
+00000a00 l       .text	00000000 $d
+00000a08 l       .text	00000000 $t
+00000a38 l       .text	00000000 $d
+00000a40 l       .text	00000000 $t
+00000abc l       .text	00000000 $d
+000021ac l     O .text	00000010 fllFactorTable.1
+00000ac4 l       .text	00000000 $t
+00000b20 l       .text	00000000 $d
+00001f54 l       .text	00000000 $t
+00000b24 l       .text	00000000 $t
+00000c44 l       .text	00000000 $d
+00000c48 l       .text	00000000 $t
+00000cc4 l       .text	00000000 $d
+00000cc8 l       .text	00000000 $t
+00000d54 l       .text	00000000 $d
+00000d5c l       .text	00000000 $t
+00000df8 l       .text	00000000 $d
+00000dfc l       .text	00000000 $t
+00000e54 l       .text	00000000 $d
+000021ac l       .text	00000000 $d
+00000000 l    df *ABS*	00000000 fsl_lpsci.c
+00000e58 l       .text	00000000 $t
+00000e59 l     F .text	00000034 CLOCK_EnableClock
+00000e88 l       .text	00000000 $d
+1ffff0a0 l       .bss	00000000 $d
+1ffff0a0 l     O .bss	00000004 s_lpsciHandle
+1ffff0a4 l       .bss	00000000 $d
+1ffff0a4 l     O .bss	00000004 s_lpsciIsr
+00000e8c l       .text	00000000 $t
+00000ebc l       .text	00000000 $d
+00000ec0 l       .text	00000000 $t
+000010ec l       .text	00000000 $d
+00001f6a l       .text	00000000 $t
+00001f9a l       .text	00000000 $t
+000010f4 l       .text	00000000 $t
+0000117c l       .text	00000000 $d
+00001fc0 l       .text	00000000 $t
+00001188 l       .text	00000000 $t
+0000122c l       .text	00000000 $d
+00001238 l       .text	00000000 $t
+00001250 l       .text	00000000 $d
+00000000 l    df *ABS*	00000000 fsl_uart.c
+0000125c l       .text	00000000 $t
+0000125d l     F .text	00000034 CLOCK_EnableClock
+0000128c l       .text	00000000 $d
+1ffff0a8 l       .bss	00000000 $d
+1ffff0a8 l     O .bss	0000000c s_uartHandle
+000021bc l       .text	00000000 $d
+000021bc l     O .text	0000000c s_uartBases
+000021c8 l       .text	00000000 $d
+000021c8 l     O .text	0000000c s_uartClock
+1ffff0b4 l       .bss	00000000 $d
+1ffff0b4 l     O .bss	00000004 s_uartIsr
+00001290 l       .text	00000000 $t
+000012cc l       .text	00000000 $d
+000012d0 l       .text	00000000 $t
+00001480 l       .text	00000000 $d
+00001ffc l       .text	00000000 $t
+0000202c l       .text	00000000 $t
+00002052 l       .text	00000000 $t
+00001488 l       .text	00000000 $t
+00001504 l       .text	00000000 $d
+00001510 l       .text	00000000 $t
+00001528 l       .text	00000000 $d
+00001534 l       .text	00000000 $t
+0000154c l       .text	00000000 $d
+00000000 l    df *ABS*	00000000 board.c
+00001558 l       .text	00000000 $t
+00001559 l     F .text	00000038 CLOCK_SetLpsci0Clock
+00001584 l       .text	00000000 $d
+00001590 l       .text	00000000 $t
+000015bc l       .text	00000000 $d
+00000000 l    df *ABS*	00000000 clock_config.c
+000015c0 l       .text	00000000 $t
+000015c1 l     F .text	00000020 CLOCK_SetSimSafeDivs
+000015d4 l       .text	00000000 $d
+000015e0 l       .text	00000000 $t
+000015e1 l     F .text	0000001c CLOCK_SetXtal0Freq
+000015f8 l       .text	00000000 $d
+000015fc l       .text	00000000 $t
+000015fd l     F .text	0000003c CLOCK_CONFIG_SetFllExtRefDiv
+00001634 l       .text	00000000 $d
+000021d4 l       .text	00000000 $d
+000021e0 l       .text	00000000 $d
+000021e8 l       .text	00000000 $d
+00001638 l       .text	00000000 $t
+00001684 l       .text	00000000 $d
+00000000 l    df *ABS*	00000000 pin_mux.c
+0000169c l       .text	00000000 $t
+0000169d l     F .text	00000034 CLOCK_EnableClock
+000016cc l       .text	00000000 $d
+000016d0 l       .text	00000000 $t
+000016d1 l     F .text	00000040 PORT_SetPinMux
+0000170c l       .text	00000000 $d
+00001710 l       .text	00000000 $t
+0000174c l       .text	00000000 $d
+00000000 l    df *ABS*	00000000 system_MKL25Z4.c
+1ffff084 l       .data	00000000 $d
+0000175c l       .text	00000000 $t
+00001770 l       .text	00000000 $d
+00000000 l    df *ABS*	00000000 initio.c
+00001774 l       .text	00000000 $t
+000017d8 l       .text	00000000 $d
+00000000 l    df *ABS*	00000000 setvbuf.c
+000017f0 l       .text	00000000 $t
+00001838 l       .text	00000000 $d
+00000000 l    df *ABS*	00000000 strlen.c
+0000183c l       .text	00000000 $t
+00001890 l       .text	00000000 $d
+00000000 l    df *ABS*	00000000 _fdopen.c
+00001898 l       .text	00000000 $t
+00001908 l       .text	00000000 $d
+00000000 l    df *ABS*	00000000 fclose.c
+0000190c l       .text	00000000 $t
+00001964 l       .text	00000000 $d
+00000000 l    df *ABS*	00000000 fflush.c
+00001968 l       .text	00000000 $t
+000019a0 l       .text	00000000 $d
+00000000 l    df *ABS*	00000000 fseek.c
+000019a8 l       .text	00000000 $t
+00001a8c l       .text	00000000 $d
+00000000 l    df *ABS*	00000000 ftell.c
+00001a94 l       .text	00000000 $t
+00001adc l       .text	00000000 $d
+00000000 l    df *ABS*	00000000 _do_fflush.c
+00001ae0 l       .text	00000000 $t
+00001b24 l       .text	00000000 $d
+00000000 l    df *ABS*	00000000 _fflush.c
+00001b28 l       .text	00000000 $t
+00001b7c l       .text	00000000 $d
+00000000 l    df *ABS*	00000000 _writebuf.c
+00001b84 l       .text	00000000 $t
+00001be4 l       .text	00000000 $d
+00000000 l    df *ABS*	00000000 _deferredlazyseek.c
+00001bec l       .text	00000000 $t
+00001c24 l       .text	00000000 $d
+00000000 l    df *ABS*	00000000 _cr__main.c
+0000208e l       .text	00000000 $t
+00000000 l    df *ABS*	00000000 memset.c
+0000209a l       .text	00000000 $t
+00000000 l    df *ABS*	00000000 remove.c
+000020a2 l       .text	00000000 $t
+00000000 l    df *ABS*	00000000 alloc.c
+000020b4 l       .text	00000000 $t
+00000000 l    df *ABS*	00000000 division_32.o
+000020e0 l       .text	00000000 $t
+0000212a l       .text	00000000 idiv_negative
+0000214e l       .text	00000000 idiv_divzero
+000020f6 l       .text	00000000 div_search4a
+000020f2 l       .text	00000000 div_search4
+00002102 l       .text	00000000 div_search1a
+000020fe l       .text	00000000 div_search1
+0000210a l       .text	00000000 div_loop1a
+00002108 l       .text	00000000 div_loop1
+0000211e l       .text	00000000 div1
+0000210e l       .text	00000000 div2
+00002118 l       .text	00000000 div_loop2
+00002130 l       .text	00000000 idiv_neg1
+00002136 l       .text	00000000 idiv_neg2
+00002140 l       .text	00000000 idiv_sign
+00002146 l       .text	00000000 idiv_sign1
+0000214c l       .text	00000000 idiv_ret
+00000000 l    df *ABS*	00000000 division_idiv0.o
+00002158 l       .text	00000000 $t
+00000000 l    df *ABS*	00000000 memcpy.o
+0000215a l       .text	00000000 $t
+00002174 l       .text	00000000 memset1
+0000216e l       .text	00000000 memset4
+00002180 l       .text	00000000 memset1_ret
+00002178 l       .text	00000000 memset1a
+00000000 l    df *ABS*	00000000 __sys_close.c
+00002184 l       .text	00000000 $t
+00000000 l    df *ABS*	00000000 __sys_flen.c
+0000218a l       .text	00000000 $t
+00000000 l    df *ABS*	00000000 __sys_istty.c
+00002190 l       .text	00000000 $t
+00000000 l    df *ABS*	00000000 __sys_remove.c
+00002196 l       .text	00000000 $t
+00000000 l    df *ABS*	00000000 __sys_seek.c
+0000219c l       .text	00000000 $t
+00000000 l    df *ABS*	00000000 __sys_tmpnam.c
+000021a2 l       .text	00000000 $t
+00000000 l    df *ABS*	00000000 __sys_write.c
+000021a8 l       .text	00000000 $t
+00000000 l    df *ABS*	00000000 __ciob.c
+1ffff0bc l       .bss	00000000 $d
+000021f0 l       .text	00000000 $d
+00000000 l    df *ABS*	00000000 mtb.c
+1ffff000 l       .mtb_buffer_default	00000000 $d
+000021f4 l       .text	00000000 $d
+0000208f g     F .text	0000000c __main
+00000400 g       .text	00000000 __FLASH_CONFIG_START__
+00000000 g     O .text	000000c0 __Vectors
+00001bed g     F .text	00000040 _deferredlazyseek
+000001f9  w    F .text	00000008 PIT_DriverIRQHandler
+000001f9  w    F .text	00000008 Reserved39_DriverIRQHandler
+00001fc1 g     F .text	0000003c LPSCI_WriteBlocking
+000000c0 g       .text	00000000 __section_table_start
+00000271  w    F .text	0000000e I2C0_IRQHandler
+000021a3 g     F .text	00000006 __sys_tmpnam
+000001f9  w    F .text	00000008 DMA0_DriverIRQHandler
+00001591 g     F .text	00000030 BOARD_InitDebugConsole
+00000719 g     F .text	0000002a HardFault_Handler
+000001f9  w    F .text	00000008 SPI1_DriverIRQHandler
+00000000 g       *ABS*	00000000 __vectors_start__
+00000400 g       *ABS*	00000000 _HeapSize
+000001f9  w    F .text	00000008 LPTMR0_DriverIRQHandler
+000001f1  w    F .text	00000008 SysTick_Handler
+00000ec1 g     F .text	00000234 LPSCI_Init
+00000631 g     F .text	00000088 led_traffic_light_pattern
+000001e9  w    F .text	00000008 PendSV_Handler
+000001d1  w    F .text	00000008 NMI_Handler
+000021f8 g       .bss	00000000 __exidx_end
+000000cc g       .text	00000000 __data_section_table_end
+00000e8d g     F .text	00000034 LPSCI_GetInstance
+0000027f  w    F .text	0000000e I2C1_IRQHandler
+000002b7  w    F .text	0000000e UART1_IRQHandler
+0000021d  w    F .text	0000000e DMA2_IRQHandler
+000001f9  w    F .text	00000008 TPM2_DriverIRQHandler
+20003000 g       *ABS*	00000000 __top_SRAM
+000002ef  w    F .text	0000000e TPM0_IRQHandler
+1ffff0b8 g     O .bss	00000004 errno
+000021f8 g       .text	00000000 _etext
+00001d85 g     F .text	00000016 led_white
+000012d1 g     F .text	000001b8 UART_Init
+00000263  w    F .text	0000000e LLWU_IRQHandler
+000001f9  w    F .text	00000008 TSI0_DriverIRQHandler
+000001f9  w    F .text	00000008 RTC_Seconds_DriverIRQHandler
+0000036d  w    F .text	0000000e TSI0_IRQHandler
+00000400 g       *ABS*	00000000 _StackSize
+000002a9  w    F .text	0000000e UART0_IRQHandler
+0000019b g     F .text	00000036 bss_init
+000001f9  w    F .text	00000008 LLWU_DriverIRQHandler
+000017f1 g     F .text	0000004c setvbuf
+00001f6b g     F .text	00000030 LPSCI_GetDefaultConfig
+1ffff170 g       .noinit	00000000 _noinit
+000001f9  w    F .text	00000008 MCG_DriverIRQHandler
+1ffff084 g     O .data	00000004 SystemCoreClock
+00020000 g       *ABS*	00000000 __top_PROGRAM_FLASH
+000002d3  w    F .text	0000000e ADC0_IRQHandler
+000020a3 g     F .text	00000012 remove
+00000343  w    F .text	0000000e Reserved39_IRQHandler
+20003000 g       *ABS*	00000000 __top_RAM
+00001511 g     F .text	00000024 UART1_DriverIRQHandler
+0000218b g     F .text	00000006 __sys_flen
+0000029b  w    F .text	0000000e SPI1_IRQHandler
+000001f9  w    F .text	00000008 FTFA_DriverIRQHandler
+000001f9  w    F .text	00000008 IntDefaultHandler
+000001f9  w    F .text	00000008 USB0_DriverIRQHandler
+1ffff570 g       .heap	00000000 _pvHeapLimit
+00001969 g     F .text	00000040 fflush
+00001d2d g     F .text	00000016 led_red
+000001f9  w    F .text	00000008 DAC0_DriverIRQHandler
+000003b3  w    F .text	0000000e PORTD_IRQHandler
+000021f8 g       .bss	00000000 __exidx_start
+00001899 g     F .text	00000074 _fdopen
+0000215b g     F .text	0000002a __aeabi_lowlevel_memset
+1ffff000 g       *ABS*	00000000 __base_SRAM
+000001f9  w    F .text	00000008 LVD_LVW_DriverIRQHandler
+000001f9  w    F .text	00000008 TPM0_DriverIRQHandler
+0000030b  w    F .text	0000000e TPM2_IRQHandler
+00000dfd g     F .text	0000005c CLOCK_BootToPeeMode
+000000c0 g       .text	00000000 __data_section_table
+00001d43 g     F .text	00000016 led_green
+000021f0 g     O .text	00000004 __num_Ciob_streams
+00000410 g       .text	00000000 __FLASH_CONFIG_END__
+00000319  w    F .text	0000000e RTC_IRQHandler
+1ffff170 g       .bss	00000000 _ebss
+00002200 g       *ABS*	00000000 _image_size
+000001f9  w    F .text	00000008 Reserved20_DriverIRQHandler
+000001f9  w    F .text	00000008 DMA3_DriverIRQHandler
+00001e67 g     F .text	0000003c led_touch_pattern_LHS
+00000d5d g     F .text	000000a0 CLOCK_SetPbeMode
+00000159 g     F .text	00000042 data_init
+00000327  w    F .text	0000000e RTC_Seconds_IRQHandler
+000001f9  w    F .text	00000008 Reserved45_DriverIRQHandler
+000020e1 g     F .text	00000006 __aeabi_idiv
+00001639 g     F .text	00000064 BOARD_BootClockRUN
+0000037b  w    F .text	0000000e MCG_IRQHandler
+000002c5  w    F .text	0000000e UART2_IRQHandler
+000019a9 g     F .text	000000ec fseek
+000009bd g     F .text	0000004c CLOCK_GetPllFllSelClkFreq
+00000000 g       *ABS*	00000000 __base_Flash
+00001711 g     F .text	0000004c BOARD_InitPins
+00001b29 g     F .text	0000005c _fflush
+00000239  w    F .text	0000000e Reserved20_IRQHandler
+00001189 g     F .text	000000b0 LPSCI_ReadBlocking
+00001ffd g     F .text	00000030 UART_GetDefaultConfig
+1ffff088 g       .bss	00000000 _bss
+00001291 g     F .text	00000040 UART_GetInstance
+000021e8 g     O .text	00000008 oscConfig_BOARD_BootClockRUN
+000001f9  w    F .text	00000008 PORTA_DriverIRQHandler
+000001f9  w    F .text	00000008 TPM1_DriverIRQHandler
+000010f5 g     F .text	00000094 LPSCI_ClearStatusFlags
+00000000 g       *ABS*	00000000 _image_start
+00020000 g       *ABS*	00000000 __top_Flash
+1ffff170 g       .noinit	00000000 _end_noinit
+20003000 g       .stack	00000000 _vStackTop
+00001d6f g     F .text	00000016 led_yellow
+000000d4 g       .text	00000000 __bss_section_table_end
+000001f9  w    F .text	00000008 RTC_DriverIRQHandler
+00000000 g       *ABS*	00000000 __base_PROGRAM_FLASH
+00000351  w    F .text	0000000e USB0_IRQHandler
+000006b9 g     F .text	00000060 poll_for_touch
+00000c49 g     F .text	00000080 CLOCK_EnablePll0
+000021a9 g     F .text	00000004 __sys_write
+0000209b g     F .text	00000008 memset
+00001ea3 g     F .text	00000022 main
+00001ae1 g     F .text	00000048 _do_fflush
+00001a95 g     F .text	0000004c ftell
+00000335  w    F .text	0000000e PIT_IRQHandler
+000020e7 g     F .text	00000072 __aeabi_uidiv
+000001e1  w    F .text	00000008 SVC_Handler
+0000190d g     F .text	0000005c fclose
+00000ac5 g     F .text	00000060 CLOCK_GetPll0Freq
+00001535 g     F .text	00000024 UART2_DriverIRQHandler
+0000219d g     F .text	00000006 __sys_seek
+00001f55 g     F .text	00000016 CLOCK_SetExternalRefClkConfig
+00000cc9 g     F .text	00000094 CLOCK_InitOsc0
+000001f9  w    F .text	00000008 DMA1_DriverIRQHandler
+0000022b  w    F .text	0000000e DMA3_IRQHandler
+00001489 g     F .text	00000088 UART_ReadBlocking
+0000175d g     F .text	00000018 SystemInit
+00000201  w    F .text	0000000e DMA0_IRQHandler
+0000202d g     F .text	00000026 UART_GetStatusFlags
+000000cc g       .text	00000000 __bss_section_table
+000001f9  w    F .text	00000008 I2C1_DriverIRQHandler
+00000b25 g     F .text	00000124 CLOCK_SetInternalRefClkConfig
+000007f1 g     F .text	0000002c wait_ms
+00002185 g     F .text	00000006 __sys_close
+0000035f  w    F .text	0000000e DAC0_IRQHandler
+00001d9b g     F .text	00000016 led_off
+1ffff080 g       .uninit_RESERVED	00000000 _end_uninit_RESERVED
+1ffff080 g       .uninit_RESERVED	00000000 _start_uninit_RESERVED
+00001b85 g     F .text	00000068 _Cwritebuf
+00001239 g     F .text	00000024 UART0_DriverIRQHandler
+00000749 g     F .text	00000030 tsi_init
+1ffff080 g       .data	00000000 _data
+00000397  w    F .text	0000000e Reserved45_IRQHandler
+1ffff170 g       .heap	00000000 _pvHeapStart
+00001db1 g     F .text	0000007a led_test_pattern
+000000d4 g       .text	00000000 __section_table_end
+000001f9  w    F .text	00000008 SPI0_DriverIRQHandler
+00000a09 g     F .text	00000038 CLOCK_SetSimConfig
+000002fd  w    F .text	0000000e TPM1_IRQHandler
+00000411 g     F .text	000000f4 DbgConsole_Init
+000001f9  w    F .text	00000008 ADC0_DriverIRQHandler
+00002197 g     F .text	00000006 __sys_remove
+000020e7 g     F .text	00000072 __aeabi_uidivmod
+00000255  w    F .text	0000000e LVD_LVW_IRQHandler
+1ffff088 g       .data	00000000 _edata
+0000028d  w    F .text	0000000e SPI0_IRQHandler
+000003a5  w    F .text	0000000e PORTA_IRQHandler
+00000a41 g     F .text	00000084 CLOCK_GetFllFreq
+000001f9  w    F .text	00000008 CMP0_DriverIRQHandler
+00001d59 g     F .text	00000016 led_blue
+00000400 g     O .text	00000010 Flash_Config
+00001f9b g     F .text	00000026 LPSCI_GetStatusFlags
+1ffff000 g       *ABS*	00000000 __base_RAM
+00000000 g     O .text	000000c0 g_pfnVectors
+00000247  w    F .text	0000000e FTFA_IRQHandler
+000000d5 g     F .text	00000084 ResetISR
+00002200 g       *ABS*	00000000 _image_end
+00000779 g     F .text	00000078 tsi_read
+00002053 g     F .text	0000003c UART_WriteBlocking
+00002159 g     F .text	00000002 __aeabi_idiv0
+00000389  w    F .text	0000000e LPTMR0_IRQHandler
+000021d4 g     O .text	0000000a mcgConfig_BOARD_BootClockRUN
+0000183d g     F .text	0000005c strlen
+000001f9  w    F .text	00000008 DMA2_DriverIRQHandler
+000001f9  w    F .text	00000008 PORTD_DriverIRQHandler
+0000058d g     F .text	000000a4 all_led_init
+00001e2b g     F .text	0000003c led_touch_pattern_RHS
+000001f9  w    F .text	00000008 I2C0_DriverIRQHandler
+1ffff000 g     O .mtb_buffer_default	00000080 __mtb_buffer__
+20002c00 g       .stack	00000000 _vStackBase
+00001775 g     F .text	0000007c _initio
+000002e1  w    F .text	0000000e CMP0_IRQHandler
+000020e1 g     F .text	00000006 __aeabi_idivmod
+1ffff0bc g     O .bss	000000b4 __Ciob
+00002191 g     F .text	00000006 __sys_istty
+1ffff09c g     O .bss	00000004 g_xtal0Freq
+0000020f  w    F .text	0000000e DMA1_IRQHandler
+000020b5 g     F .text	0000002c free
+000021e0 g     O .text	00000008 simConfig_BOARD_BootClockRUN
+
+

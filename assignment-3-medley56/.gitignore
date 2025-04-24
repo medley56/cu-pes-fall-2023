@@ -1,0 +1,8 @@
+.DS_Store
+Debug
+Release
+*.launch
+*.mex
+*.mcuxpressoide_packages_support
+*.metadata
+*.vscode

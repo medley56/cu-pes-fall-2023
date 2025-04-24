@@ -1,0 +1,35 @@
+<h1 id="pes-assignment-6-serialio">PES Assignment 6: SerialIO</h1>
+<h2 id="configuration">Configuration</h2>
+<p>To configure your serial console to interact with the Simple Command Interface (SCI) set the following parameters:</p>
+<ul>
+<li>Baud rate: 38400</li>
+<li>Parity: enabled</li>
+<li>Parity: odd</li>
+<li>Stop bits: 2</li>
+</ul>
+<img src="screenshot_serial_console_config.png" width="400">
+
+<h2 id="usage">Usage</h2>
+<img src="screenshot_serial_console_output.png" width="500">
+
+<p>The Simple Command Interface is case insensitive and supports exactly two commands: <code>echo</code> and <code>led</code>.</p>
+<h3 id="echo">ECHO</h3>
+<p>The <code>echo</code> command can be run with or without arguments (in the absense of arguments it simply prints a new line).</p>
+<pre><code>$$ echo the bar is foo
+THE BAR IS FOO
+$$ echo
+
+$$ 
+</code></pre>
+<h3 id="led">LED</h3>
+<p>The <code>led</code> command requires at least one argument to be valid; arguments can be literal integers in decimal or hex format. e.g. <code>0xFF00FF</code> or <code>147</code>. Values passed to <code>led</code> must be strictly less than <code>0xFFFFFF</code>.</p>
+<pre><code>$$ led 255
+OK
+$$ led 255 0xff00 0 0xffffff
+OK
+$$ led
+Unknown Command (LED)
+$$ led 0xffffffff
+Unknown Command (LED 0XFFFFFFFF)
+$$
+</code></pre>
