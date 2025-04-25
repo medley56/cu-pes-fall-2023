@@ -37,6 +37,11 @@ void pc_profile_off(void);
 /*
  * Print a summary of profiler calls for following functions.
  *
+ * ISHAProcessMessageBlock
+ * ISHAPadMessage
+ * ISHAReset
+ * ISHAResult
+ * ISHAInput
  */
 void print_pc_profiler_summary(void);
 #endif

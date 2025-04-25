@@ -18,7 +18,7 @@ bool static_profiling_on ;
  */
 void static_profile_on(void)
 {
-	// Enter your code here
+	static_profiling_on = true;
 }
 
 /*
@@ -26,7 +26,7 @@ void static_profile_on(void)
  */
 void static_profile_off(void)
 {
-	// Enter your code here
+	static_profiling_on = false;
 }
 
 /*
@@ -34,5 +34,11 @@ void static_profile_off(void)
  */
 void print_static_profiler_summary(void)
 {
-	// Enter your code here
+	PRINTF("Static profiling results:\r\n");
+	PRINTF("Function: ISHAProcessMessageBlock    Call count: %u\r\n", ISHAProcessMessageBlockCount);
+	PRINTF("Function: ISHAPadMessage             Call count: %u\r\n", ISHAPadMessageCount);
+	PRINTF("Function: ISHAReset                  Call count: %u\r\n", ISHAResetCount);
+	PRINTF("Function: ISHAInput                  Call count: %u\r\n", ISHAInputCount);
+	PRINTF("Function: ISHAResult                 Call count: %u\r\n", ISHAResultCount);
+	PRINTF("End of static profiling results\r\n");
 }
